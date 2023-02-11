@@ -1,0 +1,40 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  width: 25%;
+}
+
+/* button {
+  width: 10%;
+  height: 30px;
+  font-size: larger;
+} */
+
+.Start {
+  background: #0aec0a;
+}
+
+.Stop {
+  background-color: rgb(214, 11, 11);
+}
+
+#restart {
+  display: none;
+}
+
+.test{
+  background-color: rgba(161, 20, 255, 0.623);
+}
