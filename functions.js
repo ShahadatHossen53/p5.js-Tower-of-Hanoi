@@ -75,14 +75,14 @@ function displayDoms() {
         btn_reStart.style('display', 'none');
     }
 
-    if (start) {
-        //opt_destination.style("display", "none");
-        //.style("display", "none");
+    /*if (start) {
+        opt_destination.style("display", "none");
+        destinationh2.style("display", "none");
     }
     else {
-        //opt_destination.style("display", "block");
-        //destinationh2.style("display", "block");
-    }
+        opt_destination.style("display", "block");
+        destinationh2.style("display", "block");
+    }*/
 }
 
 function createPegsDisks() {
