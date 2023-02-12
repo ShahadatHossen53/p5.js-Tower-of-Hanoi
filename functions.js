@@ -58,7 +58,7 @@ function createDoms() {
 
 function btnStyle(btn, w = 6){
     btn.style("width", (btn_spaceing_x * w) + 'px');
-    btn.style("height", (btn_spaceing_y*2) + 'px');
+    btn.style("height", (btn_spaceing_y*3) + 'px');
     btn.style("font-size", (btn_spaceing_y) + 'px');
 }
 
