@@ -23,18 +23,18 @@ function createDoms() {
     btn_reStart.style("display", "none");
     btnStyle(btn_reStart);
 
-    opt_destination = createSelect();
+   /* opt_destination = createSelect();
     opt_destination.position(btn_spaceing_x * 30, btn_spaceing_y*3);
     opt_destination.option('B');
     opt_destination.option('C');
     opt_destination.selected('C');
     opt_destination.id('destination');
     opt_destination.changed(destination);
-    btnStyle(opt_destination, 3);
+    btnStyle(opt_destination, 3);*/
 
 
-    destinationh2 = createElement("h3", "Destination");
-    destinationh2.position(btn_spaceing_x * 30, 0);
+    //destinationh2 = createElement("h3", "Destination");
+    //destinationh2.position(btn_spaceing_x * 30, 0);
 
 
     numSlider = createSlider(1, 11, 3);
@@ -76,12 +76,12 @@ function displayDoms() {
     }
 
     if (start) {
-        opt_destination.style("display", "none");
-        destinationh2.style("display", "none");
+        //opt_destination.style("display", "none");
+        //.style("display", "none");
     }
     else {
-        opt_destination.style("display", "block");
-        destinationh2.style("display", "block");
+        //opt_destination.style("display", "block");
+        //destinationh2.style("display", "block");
     }
 }
 
@@ -172,8 +172,8 @@ function moveDisk(move) {
 
 function diskMover() {
     start = true;
-    opt_destination.style('display', 'none');
-    destinationh2.style('display', 'none');
+    //opt_destination.style('display', 'none');
+    //destinationh2.style('display', 'none');
     if (!runner && !solved && !diskMoving) {
         moveDisk(moves[movesCounter++]);
         numSlider.style('display', 'none');
