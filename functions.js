@@ -7,6 +7,7 @@ function createDoms() {
     btn_start.position(btn_spaceing_x * 2, btn_spaceing_y);
     btn_start.id("runner");
     btn_start.attribute('onclick', 'run()');
+    btn_start.class("Start");
     btnStyle(btn_start);
 
 
@@ -14,6 +15,7 @@ function createDoms() {
     btn_step.position(btn_spaceing_x * 10, btn_spaceing_y);
     btn_step.id("step");
     btn_step.attribute('onclick', 'diskMover()');
+    btn_step.class("Step");
     btnStyle(btn_step);
 
     btn_reStart = createButton("Restart");
@@ -21,6 +23,7 @@ function createDoms() {
     btn_reStart.id("restart");
     btn_reStart.attribute('onclick', 'reStart()');
     btn_reStart.style("display", "none");
+    btn_reStart.class("Restart");
     btnStyle(btn_reStart);
 
    /* opt_destination = createSelect();
@@ -38,12 +41,12 @@ function createDoms() {
 
 
     numSlider = createSlider(1, 11, 3);
-    numSlider.position(btn_spaceing_x * 8, btn_spaceing_y * 8);
+    numSlider.position(btn_spaceing_x * 2, btn_spaceing_y * 8);
     numSlider.style('width', (btn_spaceing_x * 8) + 'px');
     numSlider.id("numSlider");
 
     numSliderh2 = createElement("h3", "Disk Number");
-    numSliderh2.position(btn_spaceing_x * 8, btn_spaceing_y * 5);
+    numSliderh2.position(btn_spaceing_x * 2, btn_spaceing_y * 5);
 
     speedSlider = createSlider(1, 50, 5, 1);
     speedSlider.position(btn_spaceing_x * 26, btn_spaceing_y * 8);
@@ -191,7 +194,9 @@ function run() {
     btn_step.style('display', 'none');
     if (!solved) {
         runner = !runner;
-        document.getElementById("runner").textContent = runner ? "Stop" : "Start";
+        var class_name = runner ? "Stop" : "Start";
+        document.getElementById("runner").textContent = class_name;
+        btn_start.class(class_name);
     }
 }
 
@@ -223,6 +228,7 @@ function reStart() {
         btn_start.style('display', 'block');
         btn_step.style('display', 'block');
         document.getElementById("runner").textContent = "Start";
+        btn_start.class("Start");
         createPegsDisks();
     }
 }

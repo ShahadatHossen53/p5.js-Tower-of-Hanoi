@@ -24,11 +24,17 @@ td {
 } */
 
 .Start {
-  background: #0aec0a;
+  background-color: #0aec0a;
 }
 
 .Stop {
-  background-color: rgb(214, 11, 11);
+  background-color: rgb(255, 50, 50);
+}
+.Step{
+  background-color: rgb(59, 255, 134);
+}
+.Restart{
+  background-color: yellow;
 }
 
 #restart {
